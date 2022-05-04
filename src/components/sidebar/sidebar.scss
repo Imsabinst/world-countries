@@ -1,0 +1,16 @@
+.sidebar {
+  text-align: center;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__close {
+    margin: 0 auto;
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+  }
+}
