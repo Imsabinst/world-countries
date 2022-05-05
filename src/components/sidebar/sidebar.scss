@@ -1,12 +1,14 @@
 .sidebar {
   text-align: center;
-  margin: 2rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 20vw;
 
-  &__close {
+  &__left {
     margin: 0 auto;
+    width: 0;
   }
 
   &__toggle {

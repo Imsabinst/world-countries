@@ -7,22 +7,27 @@
 
     &__sidebar {
       background: rgb(187, 91, 91);
-      width: 30%;
-      height: 100%;
-      position: fixed;
+      width: 20vw;
+      height: 100vh;
+      position: relative;
       overflow: hidden;
-      left: 0;
     }
     &__navbar {
       background: rgb(70, 125, 197);
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 60px;
       display: flex;
       align-items: center;
     }
-    &__close {
-      width: 0px;
-      overflow: hidden;
+    &__sidebarClose {
+      width: 0vw;
+      height: 60px;
+    }
+    &__navbarMove {
+      width: 80vw;
+      height: 60px;
+      display: flex;
+      align-items: center;
     }
   }
 }

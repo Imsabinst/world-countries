@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { HeaderContext } from '../../context/HeaderContext'
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
 import './header.scss'
 
 const Header = () => {
-  const [toggleBars, setToggleBars] = useState(true)
+  const [toggleBars, setToggleBars] = useState(false)
 
   const handleToggleBars = () => {
     setToggleBars((click) => !click)
@@ -12,12 +13,22 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className={`header__sidebar ${toggleBars ? 'header__close' : ''}`}>
-        <Sidebar onClick={handleToggleBars} toggle={toggleBars} />
-      </div>
-      <div className="header__navbar">
-        <Navbar onClick={handleToggleBars} toggle={toggleBars} />
-      </div>
+      <HeaderContext.Provider value={(toggleBars, handleToggleBars)}>
+        <div
+          className={` ${
+            toggleBars ? 'header__sidebar' : 'header__sidebarClose'
+          }`}
+        >
+          <Sidebar />
+        </div>
+        <div
+          className={` header__navbar ${
+            toggleBars ? 'header__navbarMove' : ''
+          }`}
+        >
+          <Navbar />
+        </div>
+      </HeaderContext.Provider>
     </header>
   )
 }

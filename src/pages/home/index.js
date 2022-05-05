@@ -1,11 +1,13 @@
 import React from 'react'
 
+//import './home.scss'
+
 const countries = ['Finland', 'Sweden', 'Norway', 'Denmark']
 
 const Home = () => {
   return (
-    <div>
-      <div> {countries}</div>
+    <div className="home">
+      <div className="home__contries">{countries}</div>
     </div>
   )
 }
