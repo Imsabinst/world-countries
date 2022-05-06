@@ -9,10 +9,14 @@
   }
   .header__sidebar {
     background: #bb5b5b;
-    width: 20vw;
     height: 100vh;
+    width: 20vw;
     position: relative;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
   }
   .header__navbar {
     background: #467dc5;
@@ -22,22 +26,23 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__navbar h2 {
+    margin: 0 0 0 3rem;
+  }
+  .header__menu {
+    margin: 0 0 0 2rem;
+    font-size: 2rem;
   }
   .header__sidebarClose {
     width: 0vw;
     height: 60px;
   }
-  .header__navbarMove {
+  .header__navbarClose {
     width: 80vw;
     height: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 }
 /*# sourceMappingURL=header.css.map */

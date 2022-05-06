@@ -1,34 +1,49 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+import { AiOutlineLeft } from 'react-icons/ai'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { HeaderContext } from '../../context/HeaderContext'
-import Navbar from '../navbar'
-import Sidebar from '../sidebar'
+import Button from '../button/Button'
+
 import './header.scss'
 
 const Header = () => {
-  const [toggleBars, setToggleBars] = useState(false)
-
-  const handleToggleBars = () => {
-    setToggleBars((click) => !click)
-  }
+  const { toggleBars, handleToggleBars } = React.useContext(HeaderContext)
+  //const { theme, switchTheme } = useContext(ThemeContext)
 
   return (
     <header className="header">
-      <HeaderContext.Provider value={(toggleBars, handleToggleBars)}>
-        <div
-          className={` ${
-            toggleBars ? 'header__sidebar' : 'header__sidebarClose'
-          }`}
-        >
-          <Sidebar />
+      <div
+        className={` ${
+          toggleBars ? 'header__sidebar' : 'header__sidebarClose'
+        }`}
+      >
+        <h2>Switch Themes</h2>
+        <AiOutlineLeft
+          onClick={handleToggleBars}
+          className="header__sideClose"
+        />
+        <div className="header__sidebar__themes">
+          {/*  <button
+            style={{ background: theme?.background }}
+            onClick={switchTheme}
+          >
+            Change Themes
+          </button> */}
+          <Button />
         </div>
-        <div
-          className={` header__navbar ${
-            toggleBars ? 'header__navbarMove' : ''
-          }`}
-        >
-          <Navbar />
-        </div>
-      </HeaderContext.Provider>
+      </div>
+      {/* <div className="sidebar__themes">
+        <button onClick={toggleFunction}>Light Mode</button>
+        {toggle ? 'dark' : 'Light'}
+      </div> */}
+
+      <div
+        className={` header__navbar ${toggleBars ? 'header__navbarClose' : ''}`}
+      >
+        <GiHamburgerMenu onClick={handleToggleBars} className="header__menu" />
+        <h2>Countries</h2>
+      </div>
     </header>
   )
 }

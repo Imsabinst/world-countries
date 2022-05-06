@@ -7,27 +7,36 @@
 
     &__sidebar {
       background: rgb(187, 91, 91);
-      width: 20vw;
       height: 100vh;
+      width: 20vw;
       position: relative;
       overflow: hidden;
+      display: flex;
+      padding: 1rem;
     }
+
     &__navbar {
       background: rgb(70, 125, 197);
       width: 100vw;
       height: 60px;
       display: flex;
       align-items: center;
+      // cursor: pointer;
+      h2 {
+        margin: 0 0 0 3rem;
+      }
+    }
+    &__menu {
+      margin: 0 0 0 2rem;
+      font-size: 2rem;
     }
     &__sidebarClose {
       width: 0vw;
       height: 60px;
     }
-    &__navbarMove {
+    &__navbarClose {
       width: 80vw;
       height: 60px;
-      display: flex;
-      align-items: center;
     }
   }
 }

@@ -1,9 +1,13 @@
 // Action types
 
 /* Theme action */
-export const Theme = {
-  Light: 'white',
-  Dark: 'black',
+export const themes = {
+  light: {
+    background: '#000000',
+  },
+  dark: {
+    background: '#ff0000',
+  },
 }
 
 export const types = {

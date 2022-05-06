@@ -2,7 +2,7 @@
   .navbar {
     background: #467dc5;
     width: 100vw;
-    height: 60px;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
