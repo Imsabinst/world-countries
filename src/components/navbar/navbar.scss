@@ -1,17 +1,26 @@
 @media (min-width: 56.25rem) {
   .navbar {
-    background: rgb(70, 125, 197);
     width: 100vw;
     height: 100%;
     display: flex;
-    margin: 0 0 0 3rem;
-    align-items: center;
-    cursor: pointer;
-    font-size: 24px;
+    position: relative;
+    background: black;
 
-    h1 {
+    &__toggle {
+      margin: 2rem 0 2rem 8rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+    }
+
+    h2 {
       margin: 0 0 0 2rem;
-      font-size: 20px;
+    }
+    &__cart {
+      font-size: 2rem;
+      position: absolute;
+      right: 15%;
+      top: 35%;
     }
   }
 }

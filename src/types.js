@@ -3,10 +3,12 @@
 /* Theme action */
 export const themes = {
   light: {
-    background: '#000000',
+    background: '#eee',
+    color: 'black',
   },
   dark: {
-    background: '#ff0000',
+    background: '#333',
+    color: 'white',
   },
 }
 

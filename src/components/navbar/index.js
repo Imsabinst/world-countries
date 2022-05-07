@@ -1,18 +1,26 @@
 import React, { useContext } from 'react'
 
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { HeaderContext } from '../../context/HeaderContext'
+import { FaAffiliatetheme } from 'react-icons/fa'
 
-//import './navbar.scss'
+import { ThemeContext } from '../../context/ThemeContext'
+import { Cart } from '../cart'
+
+import './navbar.scss'
 
 const Navbar = () => {
-  const value = useContext(HeaderContext)
+  const { theme, switchTheme } = useContext(ThemeContext)
 
   return (
-    <nav className="navbar">
-      <GiHamburgerMenu onClick={value} />
-      <div className="navbar__Text">
-        <h1>Countries</h1>
+    <nav
+      style={{ background: theme?.background, color: theme.color }}
+      className={`navbar navbar-${theme}`}
+    >
+      <div className="navbar__toggle">
+        <FaAffiliatetheme onClick={switchTheme} />
+        <h2>Countries</h2>
+      </div>
+      <div className="navbar__cart">
+        <Cart />
       </div>
     </nav>
   )
