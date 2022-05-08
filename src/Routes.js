@@ -1,7 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Routes = () => {
-  return <div>Routes</div>
-}
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/header";
+import Home from "./pages/home";
 
-export default Routes
+export const Routes = () => {
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </Router>
+  );
+};

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes } from "../Route";
+import { Routes } from "../Routes";
 import { themes } from "../types";
 
 // Context has been created
