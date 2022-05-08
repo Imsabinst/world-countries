@@ -6,11 +6,14 @@
     position: relative;
     background: black;
 
-    &__toggle {
+    &__content {
       margin: 2rem 0 2rem 8rem;
       display: flex;
       align-items: center;
       font-size: 1.4rem;
+    }
+    &__switch {
+      cursor: pointer;
     }
 
     h2 {

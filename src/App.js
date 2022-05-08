@@ -1,10 +1,13 @@
-import React from 'react'
-import { ThemeProvider } from './context/ThemeContext'
+import React from "react";
+import { Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export default function App() {
   return (
     <div>
-      <ThemeProvider />
+      <ThemeProvider>
+        <Route />
+      </ThemeProvider>
     </div>
-  )
+  );
 }

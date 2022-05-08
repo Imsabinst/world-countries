@@ -3,15 +3,15 @@
 /* Theme action */
 export const themes = {
   light: {
-    background: '#eee',
-    color: 'black',
+    background: "#eee",
+    color: "black",
   },
   dark: {
-    background: '#333',
-    color: 'white',
+    background: "#333",
+    color: "white",
   },
-}
+};
 
 export const types = {
-  GET_COUNTRIES: 'GET_COUNTRIES',
-}
+  GET_COUNTRIES: "GET_COUNTRIES",
+};
