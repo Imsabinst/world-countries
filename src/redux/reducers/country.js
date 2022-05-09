@@ -3,6 +3,7 @@ import { types } from "../../types";
 const intialState = {
   countries: [],
   errorMessage: "",
+  favoriteCountries: [],
 };
 
 export const country = (state = intialState, { type, payload }) => {
@@ -14,6 +15,8 @@ export const country = (state = intialState, { type, payload }) => {
     return { ...state, countries: payload };
   case types.GET_COUNTRIES__FAILURE:
     return { ...state, errorMessage: payload };
+  case types.ADD_FAVORITE_COUNTRY:
+    return { ...state, favoriteCountries: payload };
   default:
     return state;
   }

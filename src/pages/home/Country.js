@@ -13,15 +13,15 @@ import Button from "../../components/button/Button";
 
 const Country = () => {
   const countries = useSelector((state) => state.allCountries.countries);
-  console.log("this is country", countries);
 
   return (
     <TableContainer component={Paper}>
-      <Table aria-label="Product table">
+      <Table aria-label="Countries table">
         <TableHead>
           <TableRow>
             <TableCell> Flag</TableCell>
             <TableCell> Name</TableCell>
+            <TableCell> Languages</TableCell>
             <TableCell> Population</TableCell>
             <TableCell> Region</TableCell>
           </TableRow>
@@ -35,6 +35,12 @@ const Country = () => {
               >
                 <TableCell>{row.flag}</TableCell>
                 <TableCell>{row.name.common}</TableCell>
+                <TableCell>
+                  {row.languages != null &&
+                    Object.values(row.languages).map((item) => (
+                      <div key={item}>{item}</div>
+                    ))}
+                </TableCell>
                 <TableCell>{row.population}</TableCell>
                 <TableCell>{row.region}</TableCell>
                 <TableCell>

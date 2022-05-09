@@ -7,6 +7,7 @@ const appState = {
   allCountries: {
     countries: [],
     errorMessage: "",
+    favoriteCountries: [],
   },
 };
 

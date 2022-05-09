@@ -23,6 +23,12 @@ export const fetchCountriesFailure = (error) => {
     payload: error,
   };
 };
+export const addFavouriteCountries = (countryName) => {
+  return {
+    type: types.ADD_FAVORITE_COUNTRY,
+    payload: countryName,
+  };
+};
 
 export const fetchCountriesDetails = () => {
   return async (dispatch) => {
