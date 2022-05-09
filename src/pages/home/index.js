@@ -1,25 +1,16 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCountries } from "../../redux/actions/country";
+import { useDispatch } from "react-redux";
+import { fetchCountriesDetails } from "../../redux/actions/country";
+import Country from "./Country";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const countries = useSelector((state) => state.allCountries.countries);
 
   useEffect(() => {
-    dispatch(fetchCountries());
+    dispatch(fetchCountriesDetails());
   }, [dispatch]);
 
-  const renderCountry = countries.map((country) => {
-    const { name } = country;
-
-    return (
-      <div className="home" key={name}>
-        {name}
-      </div>
-    );
-  });
-  return <div className="home">{renderCountry}</div>;
+  return <Country />;
 };
 
 export default Home;
