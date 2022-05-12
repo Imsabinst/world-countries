@@ -3,20 +3,29 @@ import { types } from "../../types";
 const intialState = {
   countries: [],
   errorMessage: "",
-  favoriteCountries: [],
+  filteredCountries: "",
 };
 
 export const country = (state = intialState, { type, payload }) => {
-  console.log("this is reducer", payload);
+  //  console.log("this is reducer", payload);
   switch (type) {
   case types.GET_COUNTRIES:
     return { ...state };
+
   case types.GET_COUNTRIES_SUCCESS:
     return { ...state, countries: payload };
+
   case types.GET_COUNTRIES__FAILURE:
     return { ...state, errorMessage: payload };
-  case types.ADD_FAVORITE_COUNTRY:
-    return { ...state, favoriteCountries: payload };
+
+  case types.SEARCH_COUNTRY:
+    // const newArray = state.countries.filter((item)=> item.name.common.toLowerCase().match(payload))
+    // console.log('-------', newArray)
+    return {
+      ...state,
+      filteredCountries: payload,
+    };
+
   default:
     return state;
   }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Routes } from "../Routes";
 import { themes } from "../types";
 
-// Context has been created
 export const ThemeContext = React.createContext({
   theme: themes.light,
   switchTheme: () => {},

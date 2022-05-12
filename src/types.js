@@ -3,11 +3,11 @@
 /**  Theme action */
 export const themes = {
   light: {
-    background: "#eee",
+    background: "#828788",
     color: "black",
   },
   dark: {
-    background: "#333",
+    background: "#3D4344",
     color: "white",
   },
 };
@@ -18,4 +18,6 @@ export const types = {
   GET_COUNTRIES_SUCCESS: "GET_COUNTRIES_SUCCESS",
   GET_COUNTRIES__FAILURE: "GET_COUNTRIES",
   ADD_FAVORITE_COUNTRY: "GET_COUNTRIES__FAILURE",
+  DELETE_COUNTRY: "DELETE_COUNTRY",
+  SEARCH_COUNTRY: "SEARCH_COUNTRY",
 };

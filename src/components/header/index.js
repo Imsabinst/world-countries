@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 
 import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { Cart } from "../cart";
+import SearchCountry from "../search";
+import { MdWavingHand } from "react-icons/md";
 
 const Header = () => {
   const { theme, switchTheme } = useContext(ThemeContext);
@@ -24,16 +26,11 @@ const Header = () => {
           <DarkModeIcon />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Country
+          Hello World <MdWavingHand />
         </Typography>
-        <IconButton
-          size="large"
-          edge="end"
-          color="inherit"
-          aria-label="cart-logo"
-        >
-          <ShoppingCartCheckoutIcon />
-        </IconButton>
+
+        <SearchCountry />
+        <Cart />
       </Toolbar>
     </AppBar>
   );

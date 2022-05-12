@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
-//import Navbar from "./components/navbar";
+import Country from "./components/country";
+import Header from "./components/header";
 import Home from "./pages/home";
 
 export const Routes = () => {
@@ -10,6 +10,7 @@ export const Routes = () => {
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/country" exact component={Country} />
       </Switch>
     </Router>
   );
