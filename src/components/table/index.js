@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import {
   TableContainer,
   Table,
@@ -9,10 +10,13 @@ import {
   TableCell,
   Paper,
 } from "@mui/material";
+
+import { ThemeContext } from "../../context/ThemeContext";
 import Button from "../../components/button/Button";
 import { addFavouriteCountries } from "../../redux/actions/cart";
-import { ThemeContext } from "../../context/ThemeContext";
 //import { Link } from "react-router-dom";
+
+import "./table.scss";
 
 const styleLight = {
   td: {
@@ -46,7 +50,7 @@ const Country = () => {
         sx={theme?.color === "white" ? styleLight : styleDark}
       >
         <TableHead>
-          <TableRow>
+          <TableRow className="table__head">
             <TableCell> Flag</TableCell>
             <TableCell> Name</TableCell>
             <TableCell> Languages</TableCell>
@@ -54,15 +58,17 @@ const Country = () => {
             <TableCell> Region</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody className="table__body">
           {countries.length > 0 &&
             countries
               .filter((item) =>
                 item.name.common.toLowerCase().match(filterCountry)
               )
               .map((country) => (
-                <TableRow key={country.name.common}>
-                  <TableCell>{country.flag}</TableCell>
+                <TableRow key={country.name.common} className="table__row">
+                  <TableCell style={{ fontSize: "2rem" }}>
+                    {country.flag}
+                  </TableCell>
                   <TableCell>
                     {/*  <Link to={`/${country.name.common}`}>
                     </Link> */}

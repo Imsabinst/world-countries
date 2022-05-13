@@ -3,7 +3,7 @@
 /**  Theme action */
 export const themes = {
   light: {
-    background: "#828788",
+    background: "#e6e1e1",
     color: "black",
   },
   dark: {

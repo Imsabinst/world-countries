@@ -1,8 +1,11 @@
 import React from "react";
+
+import { useDispatch } from "react-redux";
+
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { useDispatch } from "react-redux";
+
 import { searchCountries } from "../../redux/actions/country";
 
 const Search = styled("div")(({ theme }) => ({

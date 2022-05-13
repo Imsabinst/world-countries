@@ -1,14 +1,15 @@
 import React, { useContext, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import { Avatar, Badge, Menu, Table } from "@mui/material";
-import Container from "react-bootstrap/Container";
-
-import { ThemeContext } from "../../context/ThemeContext";
 
 import { BsFillTrashFill } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
+
+import Container from "react-bootstrap/Container";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import { Avatar, Badge, Menu, Table } from "@mui/material";
 import { deleteCountry } from "../../redux/actions/cart";
+
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const Cart = () => {
   const { theme } = useContext(ThemeContext);
@@ -69,6 +70,7 @@ export const Cart = () => {
               }}
             >
               <Table>
+                <h3>Your countries</h3>
                 {countries.map((country) => {
                   return (
                     <tbody key={country.name.common}>
@@ -127,7 +129,7 @@ export const Cart = () => {
                   position: "absolute",
                   top: 2,
                   right: 20,
-                  fontSize: 23,
+                  fontSize: 20,
                   cursor: "pointer",
                 }}
               >
