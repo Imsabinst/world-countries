@@ -8,6 +8,7 @@ const appState = {
     countries: [],
     errorMessage: "",
     filteredCountries: "",
+    singleCountry: null,
   },
   addCountries: {
     favoriteCountries: [],

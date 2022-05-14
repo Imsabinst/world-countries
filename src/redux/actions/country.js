@@ -37,3 +37,10 @@ export const fetchCountriesDetails = () => {
     }
   };
 };
+
+export const getSingleCountry = (countryName) => async (dispatch) => {
+  const response = await axios.get(
+    `https://restcountries.com/v3.1/name/${countryName}`
+  );
+  dispatch({ type: types.SINGLE_COUNTRY, payload: response.data });
+};

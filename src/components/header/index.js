@@ -7,7 +7,7 @@ import WbIncandescentIcon from "@mui/icons-material/WbIncandescent";
 
 import { ThemeContext } from "../../context/ThemeContext";
 import SearchCountry from "../search";
-import { Cart } from "../cart";
+import { Cart } from "../carts";
 
 const Header = () => {
   const { theme, switchTheme } = useContext(ThemeContext);

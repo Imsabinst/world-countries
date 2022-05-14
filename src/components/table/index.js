@@ -12,9 +12,9 @@ import {
 } from "@mui/material";
 
 import { ThemeContext } from "../../context/ThemeContext";
-import Button from "../../components/button/Button";
+import Button from "../buttons/Button";
 import { addFavouriteCountries } from "../../redux/actions/cart";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./table.scss";
 
@@ -70,9 +70,9 @@ const Country = () => {
                     {country.flag}
                   </TableCell>
                   <TableCell>
-                    {/*  <Link to={`/${country.name.common}`}>
-                    </Link> */}
-                    {country.name.common}
+                    <Link to={`/country/${country.name.common}`}>
+                      {country.name.common}
+                    </Link>
                   </TableCell>
                   <TableCell>
                     {country.languages != null &&

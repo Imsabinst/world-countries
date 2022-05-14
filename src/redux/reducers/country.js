@@ -4,6 +4,7 @@ const intialState = {
   countries: [],
   errorMessage: "",
   filteredCountries: "",
+  singleCountry: null,
 };
 
 export const country = (state = intialState, { type, payload }) => {
@@ -25,7 +26,8 @@ export const country = (state = intialState, { type, payload }) => {
       ...state,
       filteredCountries: payload,
     };
-
+  case types.SINGLE_COUNTRY:
+    return { ...state, singleCountry: payload };
   default:
     return state;
   }

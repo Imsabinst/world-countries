@@ -11,7 +11,7 @@ export const Routes = () => {
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/country" exact component={Country} />
+        <Route path="/country/:countryName" exact component={Country} />
       </Switch>
     </Router>
   );
